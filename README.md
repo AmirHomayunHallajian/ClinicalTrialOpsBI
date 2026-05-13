@@ -57,5 +57,3 @@ Add report screenshots to `screenshots/` after building the `.pbix` locally.
 ## Future Improvements
 Forecast enrollment, anomaly detection, RLS, incremental refresh, Service publish, drill-through pages, automated refresh simulation, advanced cohort analytics, and study risk scoring.
 
-## Portfolio / Job-Relevance Note
-This project demonstrates the ability to translate operational clinical-trial workflows into executive-ready dashboards and action-oriented KPIs.
