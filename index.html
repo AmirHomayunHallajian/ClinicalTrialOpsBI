@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="ClinicalTrialOpsBI is a synthetic clinical trial operations analytics portfolio with Power BI-ready data, KPI definitions, and dashboard storytelling."
+    />
+    <title>ClinicalTrialOpsBI | Clinical Trial Operations Analytics</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="ClinicalTrialOpsBI home">
+          <span class="brand-mark">CT</span>
+          <span>ClinicalTrialOpsBI</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          <span class="sr-only">Toggle navigation</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links" id="nav-menu">
+          <a href="#outcomes">Outcomes</a>
+          <a href="#dashboard">Dashboard</a>
+          <a href="#data-model">Data Model</a>
+          <a href="#workflow">Workflow</a>
+          <a class="nav-cta" href="README.md">View Docs</a>
+        </div>
+      </nav>
+
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">Synthetic Data • Power BI • Clinical Operations</p>
+          <h1>Turn clinical trial operations signals into executive-ready decisions.</h1>
+          <p class="hero-text">
+            A portfolio-ready analytics build that tracks recruitment, site activation, query resolution,
+            TMF readiness, cycle time, and digital adoption with reproducible synthetic data.
+          </p>
+          <div class="hero-actions" aria-label="Project actions">
+            <a class="button primary" href="docs/dashboard_design.md">Explore dashboard design</a>
+            <a class="button secondary" href="powerbi/dax_measures.md">Review DAX measures</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Operational KPI snapshot">
+          <div class="panel-header">
+            <span>Portfolio Pulse</span>
+            <strong>Q4 Readout</strong>
+          </div>
+          <div class="kpi-grid">
+            <article>
+              <span class="kpi-value">92%</span>
+              <span class="kpi-label">Enrollment Attainment</span>
+            </article>
+            <article>
+              <span class="kpi-value">48</span>
+              <span class="kpi-label">Synthetic Sites</span>
+            </article>
+            <article>
+              <span class="kpi-value">5d</span>
+              <span class="kpi-label">Query SLA Target</span>
+            </article>
+            <article>
+              <span class="kpi-value">6</span>
+              <span class="kpi-label">Dashboard Pages</span>
+            </article>
+          </div>
+          <div class="risk-card">
+            <span class="status-dot"></span>
+            <p><strong>Focus area:</strong> prioritize delayed activation, overdue queries, and critical document gaps.</p>
+          </div>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="section-shell outcomes" id="outcomes">
+        <div class="section-heading">
+          <p class="eyebrow">Decision Coverage</p>
+          <h2>Designed around the questions clinical teams ask every week.</h2>
+        </div>
+        <div class="outcome-grid">
+          <article class="card">
+            <span class="card-icon">01</span>
+            <h3>Enrollment Health</h3>
+            <p>Compare actual randomized participants against monthly targets by study, country, and site.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon">02</span>
+            <h3>Start-Up Bottlenecks</h3>
+            <p>Surface activation delays across contract, regulatory, and site initiation milestones.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon">03</span>
+            <h3>Data Quality</h3>
+            <p>Monitor query aging, SLA compliance, priority, and site-level backlog requiring follow-up.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon">04</span>
+            <h3>Inspection Readiness</h3>
+            <p>Identify missing, overdue, and unapproved critical documents before they become audit risk.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="dashboard-band" id="dashboard">
+        <div class="section-shell dashboard-layout">
+          <div>
+            <p class="eyebrow">Dashboard Story</p>
+            <h2>Six pages move from leadership summary to operational action.</h2>
+            <p>
+              Each page combines trend context, bottleneck analysis, and action tables so stakeholders can move
+              from a portfolio signal to a site-level intervention without losing the executive narrative.
+            </p>
+          </div>
+          <ol class="page-list">
+            <li><span>Executive Overview</span><small>Cross-study KPI cards and risk signals</small></li>
+            <li><span>Recruitment Performance</span><small>Actual vs target, funnel, and underperforming sites</small></li>
+            <li><span>Site Activation</span><small>Delay drivers, cycle time, and start-up timelines</small></li>
+            <li><span>Query Management</span><small>SLA, aging, category, and backlog visibility</small></li>
+            <li><span>TMF Readiness</span><small>Critical document completion and overdue actions</small></li>
+            <li><span>Adoption Behavior</span><small>User engagement, training, and system usage patterns</small></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section-shell model-section" id="data-model">
+        <div class="section-heading">
+          <p class="eyebrow">Power BI Foundation</p>
+          <h2>A star schema built for clear measures and stakeholder drill-down.</h2>
+        </div>
+        <div class="model-card">
+          <div class="model-node core">Fact Tables</div>
+          <div class="model-spokes" aria-label="Data model dimensions">
+            <span>dim_date</span>
+            <span>dim_study</span>
+            <span>dim_site</span>
+            <span>dim_user</span>
+            <span>dim_document_type</span>
+          </div>
+        </div>
+        <div class="fact-grid">
+          <span>fact_recruitment</span>
+          <span>fact_site_activation</span>
+          <span>fact_queries</span>
+          <span>fact_documents</span>
+          <span>fact_cycle_time</span>
+          <span>fact_adoption</span>
+        </div>
+      </section>
+
+      <section class="section-shell workflow" id="workflow">
+        <div class="section-heading">
+          <p class="eyebrow">Reproducible Workflow</p>
+          <h2>Generate, validate, model, and present the analytics story.</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <span>1</span>
+            <h3>Generate synthetic data</h3>
+            <code>python scripts/generate_mock_clinical_ops_data.py</code>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Validate outputs</h3>
+            <code>python scripts/validate_data.py</code>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Build the semantic model</h3>
+            <code>powerbi/model_relationships.md</code>
+          </article>
+          <article>
+            <span>4</span>
+            <h3>Tell the operations story</h3>
+            <code>docs/portfolio_positioning.md</code>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-inner">
+        <p>ClinicalTrialOpsBI uses fully synthetic data and contains no real patient data or PHI.</p>
+        <a href="#top">Back to top</a>
+      </div>
+    </footer>
+    <script src="assets/js/site.js"></script>
+  </body>
+</html>
