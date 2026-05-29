@@ -35,7 +35,19 @@ Are studies recruiting on target? Which sites/countries are delayed? Are queries
 Power BI, DAX, Power Query, Python, pandas, numpy, CSV.
 
 ## Repository Structure
-See folders under `data/`, `scripts/`, `powerbi/`, `docs/`, and `tests/`.
+See folders under `data/`, `scripts/`, `powerbi/`, `docs/`, `assets/`, and `tests/`.
+
+
+## Website Preview
+A redesigned static landing page is available at `index.html` for portfolio presentation and stakeholder review. It summarizes the project narrative, dashboard pages, data model, and reproducible workflow in a responsive web format.
+
+Open it locally from the repository root:
+
+```bash
+python -m http.server 8000
+```
+
+Then visit `http://localhost:8000/`.
 
 ## Quickstart
 1. `python -m venv .venv`
